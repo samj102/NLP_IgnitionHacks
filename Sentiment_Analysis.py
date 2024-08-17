@@ -1,6 +1,5 @@
 #Before beginning, make sure the TextBlob library is installed on your system, you can install it using 'pip install textblob'.
 
-
 # Import the TextBlob library
 from textblob import TextBlob
 
@@ -15,11 +14,9 @@ def analyze_sentiment(text):
     else:
         return "Neutral"
 
-# Example input
-text = input("Enter a sentence to analyze sentiment: ")
-
-# Get sentiment
-result = analyze_sentiment(text)
-
-# Output the result
-print(f"The sentiment of the sentence is: {result}")
+while True:
+    text = input("Enter a sentence to analyze sentiment (or type 'quit'): ")
+    if text.lower() == "quit":
+        break
+    result = analyze_sentiment(text)
+    print(f"The sentiment of the sentence is: {result}")

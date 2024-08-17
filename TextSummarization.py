@@ -23,7 +23,7 @@ parser = PlaintextParser.from_string(text, Tokenizer("english"))
 
 # Summarize the text using LSA (Latent Semantic Analysis)
 summarizer = LsaSummarizer()
-summary = summarizer(parser.document, 2)  # Summarize to 2 sentences
+summary = summarizer(parser.document, 2)  
 
 #Print the Original text
 print("Original Text:\n", text)
